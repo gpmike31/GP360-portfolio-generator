@@ -1,1 +1,1 @@
-# gp360-portfolio-generator
+# GP360-portfolio-generator
