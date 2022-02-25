@@ -1,6 +1,6 @@
 //input function
-const profileDataArgs = process.argv.slice(2, process.argv.length);
-console.log(profileDataArgs);
+//const profileDataArgs = process.argv.slice(2, process.argv.length);
+//console.log(profileDataArgs);
 
 //output function
 //const printProfileData = profileDataArr => {
@@ -16,10 +16,10 @@ console.log(profileDataArgs);
 //};
 
 const generatePage = (userName, githubName) => {
-    return `
-    Name: ${Gerald}
-    Github: ${geraldhub}
-    `;
+  return `
+    Name: ${userName}
+    Github: ${githubName}
+  `;
 };
 
 console.log(generatePage('Gerald', 'geraldhub'));
