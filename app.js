@@ -1,6 +1,14 @@
 //input function
-//const profileDataArgs = process.argv.slice(2, process.argv.length);
-//console.log(profileDataArgs);
+const profileDataArgs = process.argv.slice(2, process.argv.length);
+const userName = profileDataArgs[0];
+const githubName = profileDataArgs[1];
+const generatePage = (userName, githubName) => {
+  return `
+    Name: ${userName}
+    Github: ${githubName}
+  `;
+};
+console.log(generatePage(userName, githubName));
 
 //output function
 //const printProfileData = profileDataArr => {
@@ -15,12 +23,7 @@
   //  profileDataArr.forEach(profileItem => console.log(profileItem));
 //};
 
-const generatePage = (userName, githubName) => {
-  return `
-    Name: ${userName}
-    Github: ${githubName}
-  `;
-};
+
 
 console.log(generatePage('Gerald', 'geraldhub'));
 
