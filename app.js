@@ -1,13 +1,25 @@
 //input function
 const profileDataArgs = process.argv.slice(2, process.argv.length);
-const userName = profileDataArgs[0];
-const githubName = profileDataArgs[1];
+const [userName, githubName] = profileDataArgs;
 const generatePage = (userName, githubName) => {
   return `
-    Name: ${userName}
-    Github: ${githubName}
+  <!DOCTYPE html> 
+  <html lang="en"> 
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio Demo</title>
+  </head>
+
+  <body>
+    <h1>${userName}</h1>
+    <h2><a href="https://github.com/${githubName}">Github</a></h2>
+  </body>
+  </html>
   `;
 };
+console.log(userName, githubName);
 console.log(generatePage('Gerald', 'geraldhub'));
 
 //output function
