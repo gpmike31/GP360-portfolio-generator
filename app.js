@@ -8,7 +8,7 @@ const generatePage = (userName, githubName) => {
     Github: ${githubName}
   `;
 };
-console.log(generatePage(userName, githubName));
+console.log(generatePage('Gerald', 'geraldhub'));
 
 //output function
 //const printProfileData = profileDataArr => {
@@ -25,5 +25,5 @@ console.log(generatePage(userName, githubName));
 
 
 
-console.log(generatePage('Gerald', 'geraldhub'));
+
 
