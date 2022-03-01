@@ -12,7 +12,7 @@ module.exports = (Gerald, geraldhub) => {
     
     <body>
       <h1>${Gerald}</h1>
-      <h2><a href="https://github.com/geraldhub">geraldhub</a></h2>
+      <h2><a href="https://github.com/${geraldhub}">geraldhub</a></h2>
     </body>
     </html>
     `;
