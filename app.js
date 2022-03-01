@@ -1,26 +1,23 @@
 //input function
-const profileDataArgs = process.argv.slice(2, process.argv.length);
-const [userName, githubName] = profileDataArgs;
-const generatePage = (userName, githubName) => {
-  return `
-  <!DOCTYPE html> 
-  <html lang="en"> 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Portfolio Demo</title>
-  </head>
+const fs = require('fs');
+const generatePage = require('./src/page-template');
 
-  <body>
-    <h1>${userName}</h1>
-    <h2><a href="https://github.com/${githubName}">Github</a></h2>
-  </body>
-  </html>
-  `;
-};
-console.log(userName, githubName);
-console.log(generatePage('Gerald', 'geraldhub'));
+const profileDataArgs = process.argv.slice(2);
+
+console.log(profileDataArgs);
+
+const [Gerald, geraldhub] = profileDataArgs;
+
+console.log(Gerald, geraldhub);
+
+const pageHTML = generatePage(Gerald, geraldhub);
+
+fs.writeFile('./index.html', pageHTML, err => {
+  if (err) throw err;
+
+  console.log('Portfolio complete! Check out index.html to see the output!');
+});
+
 
 //output function
 //const printProfileData = profileDataArr => {
