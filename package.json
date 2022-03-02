@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/gpmike31/GP360-portfolio-generator/issues"
   },
-  "homepage": "https://github.com/gpmike31/GP360-portfolio-generator#readme"
+  "homepage": "https://github.com/gpmike31/GP360-portfolio-generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  }
 }
