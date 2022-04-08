@@ -14,6 +14,10 @@
 
 * {
   box-sizing: border-box;
+  image-orientation: inherit;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 body {
@@ -57,6 +61,8 @@ h4 {
 
 h5 {
   font-size: 1.25rem;
+  align-items: center;
+  flex: inherit;
 }
 
 h6 {
@@ -74,7 +80,6 @@ a {
 
 header {
   background-color: var(--primary);
-  position: sticky;
   top: 0;
 }
 
@@ -82,6 +87,7 @@ nav {
   width: 100%;
   margin-top: 10px;
   justify-content: center;
+  margin:auto;
 }
 
 nav a:hover {
@@ -92,7 +98,7 @@ nav a:hover {
 .page-title {
   text-align: center;
   width: 100%;
-  margin: 0;
+  margin: auto;
   font-size: 2.5rem;
 }
 
@@ -735,7 +741,7 @@ nav a:hover {
 }
 
 .justify-space-between {
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .justify-space-around {
@@ -819,6 +825,56 @@ nav a:hover {
 }
 
 /* col-sm */
+@media screen and (min-width: 575px) {
+  .col-sm-1 {
+    flex: 0 0 calc(100% * 1 / 12 - 0.5%);
+  }
+
+  .col-sm-2 {
+    flex: 0 0 calc(100% * 2 / 12 - 0.5%);
+  }
+
+  .col-sm-3 {
+    flex: 0 0 calc(100% * 3 / 12 - 0.5%);
+  }
+
+  .col-sm-4 {
+    flex: 0 0 calc(100% * 4 / 12 - 0.5%);
+  }
+
+  .col-sm-5 {
+    flex: 0 0 calc(100% * 5 / 12 - 0.5%);
+  }
+
+  .col-sm-6 {
+    flex: 0 0 calc(100% * 6 / 12 - 0.5%);
+  }
+
+  .col-sm-7 {
+    flex: 0 0 calc(100% * 7 / 12 - 0.5%);
+  }
+
+  .col-sm-8 {
+    flex: 0 0 calc(100% * 8 / 12 - 0.5%);
+  }
+
+  .col-sm-9 {
+    flex: 0 0 calc(100% * 9 / 12 - 0.5%);
+  }
+
+  .col-sm-10 {
+    flex: 0 0 calc(100% * 10 / 12 - 0.5%);
+  }
+
+  .col-sm-11 {
+    flex: 0 0 calc(100% * 11 / 12 - 0.5%);
+  }
+
+  .col-sm-12 {
+    flex: 0 0 100%;
+  }
+}
+
 @media screen and (min-width: 640px) {
   .col-sm-1 {
     flex: 0 0 calc(100% * 1 / 12 - 0.5%);
